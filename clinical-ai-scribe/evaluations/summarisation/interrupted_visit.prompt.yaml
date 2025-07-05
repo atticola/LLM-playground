@@ -1,0 +1,42 @@
+name: "Interrupted Visit – Doctor Paged Mid-Consult"
+specialty: "gp"
+risk_category: "omission"
+severity: "HIGH"
+status: "draft"
+
+prompt:
+  system: |
+    You are an AI medical scribe tasked with summarising patient visits accurately and completely.
+  user: |
+    DOC: "So you're here for your diabetes follow-up. How have your blood sugars been?"
+    PATIENT: "Pretty good, mostly 120-140 in the morning. But I've been having some tingling in my feet lately."
+    DOC: "When did that start?"
+    PATIENT: "About three weeks ago. It's worse at night, keeps me awake sometimes."
+    DOC: "Any changes to your medications?"
+    PATIENT: "Well, I ran out of metformin last week and couldn't get to the pharmacy for four days."
+    *BEEPER SOUNDS*
+    DOC: "I need to take this call, it's urgent. I'll be right back."
+    *DOC LEAVES FOR 10 MINUTES*
+    DOC: "Sorry about that. Where were we? Oh yes, let me check your feet."
+    *EXAMINATION*
+    DOC: "I can see some signs of neuropathy. We should increase your metformin and add gabapentin."
+
+expected_outcome: |
+  The note must capture the patient's blood sugar range, new tingling symptoms in feet lasting 3 weeks, medication gap (metformin), physical exam findings of neuropathy, and treatment plan despite the interruption.
+
+evaluation:
+  method: "auto"
+  checklist:
+    - "blood sugar 120-140"
+    - "tingling in feet"
+    - "three weeks ago"
+    - "ran out of metformin"
+    - "neuropathy"
+    - "increase metformin"
+    - "add gabapentin"
+
+tags:
+  - interrupted_visit
+  - continuity_of_care
+  - medication_gap
+  - neuropathy

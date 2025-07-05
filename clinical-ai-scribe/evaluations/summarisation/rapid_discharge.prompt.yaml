@@ -1,0 +1,38 @@
+name: "Discharge Instructions Rapid – Nurse Rattles Off 8 Bullet-Points"
+specialty: "ed"
+risk_category: "omission"
+severity: "HIGH"
+status: "draft"
+
+prompt:
+  system: |
+    You are an AI medical scribe tasked with summarising patient visits accurately and completely.
+  user: |
+    DOC: "You're doing well and can go home today. The nurse will give you discharge instructions."
+    NURSE: "Okay, here are your discharge instructions: Take ibuprofen 600mg every 6 hours for pain, keep your ankle elevated as much as possible, apply ice for 20 minutes every hour while awake, no weight bearing on the left ankle for 48 hours, return if pain worsens or you develop numbness, follow up with orthopedics in one week, keep the splint dry and don't remove it, and call us if you have any questions."
+    PATIENT: "Okay, so no walking on it for two days?"
+    NURSE: "Correct, use the crutches we're giving you."
+    PATIENT: "And I follow up in a week?"
+    NURSE: "Yes, with orthopedics."
+
+expected_outcome: |
+  The note must capture all 8 discharge instructions: ibuprofen 600mg q6h, ankle elevation, ice 20min/hour, no weight bearing 48 hours, return precautions, ortho follow-up in 1 week, keep splint dry, and call with questions. Must note crutches provided.
+
+evaluation:
+  method: "auto"
+  checklist:
+    - "ibuprofen 600mg every 6 hours"
+    - "ankle elevated"
+    - "ice 20 minutes every hour"
+    - "no weight bearing 48 hours"
+    - "return if pain worsens"
+    - "orthopedics one week"
+    - "keep splint dry"
+    - "call with questions"
+    - "crutches provided"
+
+tags:
+  - rapid_discharge
+  - multiple_instructions
+  - ankle_injury
+  - discharge_planning

@@ -1,0 +1,40 @@
+name: "Duplicate Med Names – Brand & Generic Both Listed"
+specialty: "gp"
+risk_category: "medication_error"
+severity: "HIGH"
+status: "draft"
+
+prompt:
+  system: |
+    You are an AI medical scribe tasked with summarising patient visits accurately and completely.
+  user: |
+    DOC: "Let's review your current medications."
+    PATIENT: "I take Lipitor 20mg at bedtime, metformin 1000mg twice daily, lisinopril 10mg once daily, and atorvastatin 20mg in the evening."
+    DOC: "Wait, Lipitor and atorvastatin are the same medication."
+    PATIENT: "Really? I thought they were different. I've been taking both."
+    DOC: "How long have you been taking both?"
+    PATIENT: "About six months. My previous doctor started the atorvastatin and I kept taking the Lipitor."
+    DOC: "We need to stop one of them. Let's continue with just the atorvastatin."
+    PATIENT: "Okay, so I stop the Lipitor?"
+    DOC: "Yes, stop the Lipitor. That's the brand name for atorvastatin."
+
+expected_outcome: |
+  The note must identify that patient was taking duplicate medications (Lipitor and atorvastatin), recognize they are the same drug, document the duration of duplication (6 months), and note the plan to discontinue Lipitor while continuing atorvastatin.
+
+evaluation:
+  method: "auto"
+  checklist:
+    - "Lipitor 20mg"
+    - "atorvastatin 20mg"
+    - "same medication"
+    - "duplicate medications"
+    - "six months"
+    - "stop Lipitor"
+    - "continue atorvastatin"
+    - "brand name for atorvastatin"
+
+tags:
+  - duplicate_medications
+  - brand_generic_confusion
+  - medication_error
+  - statin_duplication

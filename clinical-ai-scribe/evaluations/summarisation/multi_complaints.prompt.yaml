@@ -1,0 +1,40 @@
+name: "Multiple Complaints – Rash Plus Diabetes Follow-up"
+specialty: "gp"
+risk_category: "omission"
+severity: "MEDIUM"
+status: "draft"
+
+prompt:
+  system: |
+    You are an AI medical scribe tasked with summarising patient visits accurately and completely.
+  user: |
+    DOC: "I see you're here for diabetes follow-up and also have a rash concern."
+    PATIENT: "Yes, my blood sugars have been running high, around 200-250, and I have this itchy rash on my arms."
+    DOC: "Let's start with the diabetes. When did your sugars start running high?"
+    PATIENT: "About three weeks ago. I've been under a lot of stress at work."
+    DOC: "Are you taking your metformin regularly?"
+    PATIENT: "Yes, every day. Should I increase it?"
+    DOC: "Let's check your A1c first. Now about this rash, when did it start?"
+    PATIENT: "Two days ago. It's red, bumpy, and very itchy. I haven't changed soaps or detergents."
+    DOC: "Let me examine both issues. *EXAMINATION* Your A1c is 9.2, up from 7.1 last visit. The rash looks like contact dermatitis."
+
+expected_outcome: |
+  The note must address both chief complaints: elevated blood sugars (200-250) for 3 weeks with A1c 9.2, and new itchy rash on arms for 2 days diagnosed as contact dermatitis. Both issues require documentation and plans.
+
+evaluation:
+  method: "auto"
+  checklist:
+    - "blood sugars 200-250"
+    - "three weeks ago"
+    - "A1c 9.2"
+    - "itchy rash on arms"
+    - "two days ago"
+    - "contact dermatitis"
+    - "work stress"
+    - "metformin daily"
+
+tags:
+  - multiple_complaints
+  - diabetes_management
+  - dermatitis
+  - dual_diagnosis

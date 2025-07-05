@@ -1,0 +1,39 @@
+name: "Prior Visit Reference – As Noted Last Month"
+specialty: "cardiology"
+risk_category: "omission"
+severity: "MEDIUM"
+status: "draft"
+
+prompt:
+  system: |
+    You are an AI medical scribe tasked with summarising patient visits accurately and completely.
+  user: |
+    DOC: "How have you been since your last visit?"
+    PATIENT: "The chest pain is much better since we increased the metoprolol."
+    DOC: "Good. As noted last month, your echo showed mild left ventricular dysfunction."
+    PATIENT: "Right, and you said we'd recheck it in six months."
+    DOC: "Yes, and your exercise tolerance?"
+    PATIENT: "Better. I can walk two blocks now without getting short of breath."
+    DOC: "That's improvement from last month when you could only walk half a block."
+    PATIENT: "Yes, the medication is definitely helping."
+    DOC: "Let's continue the current regimen and recheck your echo in May."
+
+expected_outcome: |
+  The note must reference the previous visit findings (mild LV dysfunction from echo, exercise tolerance of half a block) and current improvements (chest pain better, can walk two blocks) while noting the plan to recheck echo in May.
+
+evaluation:
+  method: "auto"
+  checklist:
+    - "chest pain better"
+    - "increased metoprolol"
+    - "mild left ventricular dysfunction"
+    - "echo last month"
+    - "walk two blocks"
+    - "improvement from half a block"
+    - "recheck echo in May"
+
+tags:
+  - prior_visit_reference
+  - medication_adjustment
+  - exercise_tolerance
+  - echo_follow_up

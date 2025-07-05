@@ -1,0 +1,271 @@
+# Turkish Clinical AI Scribe Test Case Template - Clinical Standard
+# Expert-validated template for Turkish healthcare environments
+
+# ================================
+# Core Identification Metadata
+# ================================
+name: "TR-[CATEGORY]-[NUMBER] – [English Title]"
+specialty: "[cardiology/family_medicine/emergency_medicine/psychiatry/pediatrics/womens_health/internal_medicine]"
+risk_category: "[omission/hallucination/medication_error/cultural_misunderstanding/privacy_violation]"
+severity: "[HIGH/MEDIUM/LOW]"
+status: "draft"  # draft -> clinical_review -> cultural_validation -> approved
+language: "turkish"
+version: "2.0"
+creation_date: "[YYYY-MM-DD]"
+last_updated: "[YYYY-MM-DD]"
+
+# ================================
+# Clinical Complexity Assessment
+# ================================
+complexity_assessment:
+  linguistic_complexity: "[1-10]"        # Morphological, syntactic, semantic challenges
+  cultural_sensitivity: "[1-10]"         # Cultural communication pattern complexity
+  clinical_criticality: "[1-10]"         # Patient safety impact
+  technical_implementation: "[1-10]"     # NLP processing difficulty
+  validation_difficulty: "[1-10]"        # Expert review complexity
+
+# ================================
+# Turkish Healthcare Context
+# ================================
+cultural_context:
+  geographic_region: "[marmara/karadeniz/ege/akdeniz/ic_anadolu/dogu_anadolu/guneydogu_anadolu/multi_regional]"
+  dialect_level: "[standard_turkish/mild_dialect/strong_dialect/mixed_dialects]"
+  formality_pattern: "[formal/informal/mixed/authority_dynamic]"
+  family_dynamics: "[individual_patient/family_present/family_dominant/multi_generational]"
+  socioeconomic_context: "[urban_educated/rural_traditional/mixed_background]"
+  religious_context: "[secular/mild_religious/strong_religious/mixed]"
+
+# ================================
+# Clinical NLP Processing Requirements
+# ================================
+nlp_processing_requirements:
+  morphological_analysis:
+    - turkish_agglutination_handling
+    - medical_terminology_parsing
+    - compound_word_recognition
+    
+  semantic_processing:
+    - polysemy_disambiguation
+    - metaphorical_language_interpretation
+    - cultural_pragmatic_inference
+    
+  discourse_analysis:
+    - multi_speaker_turn_tracking
+    - authority_hierarchy_recognition
+    - indirect_communication_mapping
+    
+  temporal_processing:
+    - turkish_aspect_tense_system
+    - medical_timeline_reconstruction
+    - symptom_onset_duration_extraction
+
+# ================================
+# Clinical AI Prompt Configuration
+# ================================
+prompt:
+  system: |
+    You are an expert clinical AI scribe specialized in Turkish healthcare environments.
+    Your primary objective is accurate, culturally-sensitive medical documentation.
+    
+    CORE COMPETENCIES:
+    - Medical terminology processing (Turkish/English hybrid)
+    - Cultural communication pattern recognition
+    - Multi-speaker dialogue management
+    - Indirect communication interpretation
+    - Clinical priority assessment
+    
+    CRITICAL RULES:
+    - Never provide medical advice or assume physician role
+    - Preserve patient autonomy in multi-speaker scenarios
+    - Maintain clinical accuracy while respecting cultural context
+    - Flag urgent medical situations appropriately
+    - Standardize hybrid medical terminology consistently
+    
+    TURKISH-SPECIFIC PROCESSING:
+    - Recognize formal/informal language transitions
+    - Identify family hierarchy and decision-making dynamics
+    - Categorize religious/cultural references appropriately
+    - Resolve ambiguous pronouns and temporal markers
+    - Translate indirect symptom descriptions to clinical language
+    
+  user: |
+    # Medical Encounter Transcript (Turkish)
+    # Setting: [Clinical context, location, participants]
+    # Duration: [Encounter length]
+    # Participants: [DOKTOR, HASTA, ANNE, BABA, etc.]
+    
+    [Insert Turkish medical dialogue here]
+    
+    # Example format:
+    # DOKTOR: "Merhaba [Patient name], bugün nasılsınız?"
+    # HASTA: "İyiyim doktor bey, ama..."
+    # ANNE: "Yok kızım, hiç iyi değil, 3 gündür..."
+    
+  assistant_context: |
+    [If applicable: Previous AI responses that inform current processing]
+
+# ================================
+# Expected Clinical Documentation Output
+# ================================
+expected_outcome: |
+  CLINICAL DOCUMENTATION REQUIREMENTS:
+  
+  1. CHIEF COMPLAINT
+     - Primary concern in patient's words (translated if needed)
+     - Cultural context preserved
+     - Urgency indicators noted
+  
+  2. HISTORY OF PRESENT ILLNESS
+     - Chronological symptom progression
+     - Family vs. patient reporting distinguished
+     - Indirect communication translated to clinical language
+     - Cultural/religious references categorized appropriately
+  
+  3. REVIEW OF SYSTEMS
+     - Systematic symptom review
+     - Negative findings documented
+     - Cultural symptom descriptions standardized
+  
+  4. PHYSICAL EXAMINATION
+     - Examination findings
+     - Patient cooperation/cultural constraints noted
+  
+  5. ASSESSMENT AND PLAN
+     - Clinical reasoning
+     - Treatment recommendations
+     - Cultural considerations for treatment adherence
+     - Follow-up requirements
+  
+  QUALITY STANDARDS:
+  - Medical terminology consistency (Turkish ↔ English)
+  - Cultural sensitivity maintenance
+  - Clinical accuracy preservation
+  - Comprehensive information capture
+
+# ================================
+# Clinical Evaluation Framework
+# ================================
+evaluation:
+  method: "clinical_expert_validation"
+  
+  # Clinical Accuracy Checklist
+  clinical_accuracy:
+    - "[Primary symptom correctly identified and standardized]"
+    - "[Medical terminology consistently used throughout]"
+    - "[Temporal information accurately captured]"
+    - "[Medication information complete and deduplicated]"
+    - "[Urgent findings appropriately flagged]"
+    - "[Clinical priorities correctly identified]"
+    - "[Follow-up requirements clearly stated]"
+    - "[Treatment compliance factors noted]"
+    
+  # Turkish Language Processing
+  linguistic_processing:
+    - "[Formal/informal transitions appropriately noted]"
+    - "[Cultural references properly categorized]"
+    - "[Multi-speaker dialogue correctly attributed]"
+    - "[Indirect communication translated to clinical language]"
+    - "[Ambiguous pronouns resolved correctly]"
+    - "[Regional dialect variations standardized]"
+    - "[Code-switching patterns properly handled]"
+    
+  # Cultural Competency Assessment
+  cultural_competency:
+    - "[Family dynamics appropriately documented]"
+    - "[Patient autonomy preserved in documentation]"
+    - "[Religious/cultural context respected]"
+    - "[Gender-sensitive information handled appropriately]"
+    - "[Authority patterns correctly identified]"
+    - "[Privacy preferences acknowledged]"
+    - "[Cultural symptom expressions translated]"
+
+  # Expert Validation Requirements
+  expert_validation:
+    clinical_accuracy:
+      reviewer_type: "board_certified_turkish_physician"
+      focus_areas: ["diagnosis_support", "treatment_planning", "patient_safety"]
+      
+    cultural_competency:
+      reviewer_type: "turkish_cultural_healthcare_consultant"
+      focus_areas: ["communication_patterns", "family_dynamics", "religious_sensitivity"]
+      
+    linguistic_quality:
+      reviewer_type: "turkish_medical_linguist"
+      focus_areas: ["terminology_accuracy", "pragmatic_interpretation", "dialect_processing"]
+
+# ================================
+# Clinical System Integration
+# ================================
+system_integration:
+  clinical_environments: ["hospital_wards", "outpatient_clinics", "emergency_departments"]
+  technical_requirements: ["HIS_compatibility", "HL7_FHIR_support", "Turkish_character_encoding"]
+  performance_standards:
+    processing_speed: "<2_seconds_per_encounter"
+    accuracy_threshold: ">95%_medical_accuracy"
+    availability: "99.9%_uptime"
+  
+  regulatory_compliance:
+    - "KVKK_personal_data_protection"
+    - "Turkish_ministry_of_health_standards"
+    - "Medical_device_regulation_compliance"
+    - "ISO_27799_health_informatics_security"
+
+# ================================
+# Clinical Tagging System
+# ================================
+tags:
+  # Turkish Language Features
+  - turkish_morphology
+  - code_switching
+  - dialect_variation
+  - formal_informal_mixing
+  - metaphorical_language
+  
+  # Turkish Cultural Healthcare Dynamics
+  - family_hierarchy
+  - religious_references
+  - gender_dynamics
+  - authority_patterns
+  - privacy_concerns
+  
+  # Clinical Categories
+  - symptom_interpretation
+  - medication_management
+  - emergency_triage
+  - chronic_disease_monitoring
+  - preventive_care
+  
+  # Technical Clinical Challenges
+  - multi_speaker_dialogue
+  - temporal_ambiguity
+  - semantic_disambiguation
+  - pragmatic_inference
+  - cultural_clinical_translation
+
+# ================================
+# Clinical Quality Metrics
+# ================================
+clinical_success_metrics:
+  # Primary Clinical Accuracy
+  medical_information_extraction:
+    target_accuracy: ">98%"
+    critical_information_capture: ">99.5%"
+    emergency_case_accuracy: ">99.8%"
+    
+  # Cultural Healthcare Competency
+  cultural_sensitivity_metrics:
+    family_dynamics_recognition: ">90%"
+    patient_autonomy_preservation: ">95%"
+    religious_context_handling: ">92%"
+    
+  # Turkish Language Processing
+  linguistic_performance:
+    terminology_consistency: ">98%"
+    dialect_standardization: ">95%"
+    pragmatic_interpretation: ">90%"
+    
+  # Clinical Decision Support
+  clinical_utility:
+    physician_satisfaction: ">90%"
+    documentation_completeness: ">95%"
+    clinical_workflow_integration: ">88%" 
