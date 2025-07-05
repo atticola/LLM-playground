@@ -1,0 +1,23 @@
+# Prompt Evaluation Library for Clinical AI Scribes
+
+A curated set of stress-test scenarios and evaluator prompts for **clinical note–generation LLMs**.  
+Each case follows the Data–Assessment–Plan (DAP) note structure and is tagged for easy regression testing (e.g. `medication_logic`, `risk_communication`, `red_flag`).
+
+## Contents
+- **/Prompt-Evaluation Library for Clinical AI Scribes.pdf** – original white-paper (10 pp.)  
+- `test_cases/` – JSON templates ready for LangChain/LangSmith  
+- `README.md` – this guide
+
+## Quick start
+1. Clone or download the repo.
+2. Load a test case into your LangSmith suite.
+3. Inspect the structured evaluator output ≈  
+   `{ "format_match": true, "hallucination": false, … }`
+
+## Why this matters
+LLM-generated notes can hallucinate or omit critical facts; a reproducible test bench helps spot those errors before they reach patients.
+
+## Licence
+MIT – see `LICENSE`.
+
+*Inspired by the need for safer AI scribes in clinical workflows.*  <!-- cite the PDF if you quote it verbatim -->
