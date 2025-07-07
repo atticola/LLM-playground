@@ -36,12 +36,12 @@ Advanced NLP scenarios testing morphological analysis, entity recognition, and s
 **Example Case A1-01: Hybrid Medical Terminology**
 ```
 DOKTOR: "Hastanın kardiyak durumu nasıl?"
-HASTA: "Heart attack geçirdim galiba, ama myokard infarktüsü değil dedi başka doktor."
-HASTA: "Aspirin alıyorum, ama asetilsalisilik asit de verdi eczacı."
+HASTA: "Kalp krizi geçirdim galiba, ama myokard infarktüsü değil dedi başka doktor."
+HASTA: "Fısfıs kullanıyorum, ama ventolin de verdi eczacı."
 ```
 
 **Clinical Focus**: Testing AI's ability to:
-- Normalize hybrid terminology (kardiyak/cardiac, heart attack/myokard infarktüsü)
+- Normalize hybrid terminology (kardiyak/cardiac, kalp krizi/myokard infarktüsü)
 - Detect medication duplication across language variants
 - Maintain clinical accuracy during terminology standardization
 
@@ -50,9 +50,9 @@ Evaluation of AI performance when cultural communication patterns obscure or mod
 
 **Example Case B1-01: Multi-generational Decision Making**
 ```
-DOKTOR: "Hangi şikayetiniz var?"
-HASTA: "Eh işte, biraz..."
-ANNE: "Kızım 3 gündür ağrıyor, ama söylemiyor. Başı da ağrıyor."
+DOKTOR: "Ne şikayetin var? Ne zamandır var"
+HASTA: "İyiyim, biraz..."
+ANNE: "Kızımın 3 gündür karnı ağrıyor, ama söylemiyor. Başı da ağrıyor."
 HASTA: "Anne, ben söyleyebilirim."
 ANNE: "Hep böyle, hiç derdini anlatmaz."
 ```
@@ -81,12 +81,6 @@ HASTA: "İşte, sanki bıçak saplanıyor göğsümde 2 saattir."
 
 ## Technical Implementation Specifications
 
-### NLP Processing Pipeline
-1. **Turkish Morphological Analysis** - Zemberek integration for accurate tokenization
-2. **Medical Entity Recognition** - Custom NER models trained on Turkish medical corpora
-3. **Code-switching Detection** - Algorithms to identify and properly categorize mixed-language segments
-4. **Cultural Context Analysis** - Rule-based systems for cultural communication pattern recognition
-5. **Clinical Summarization** - Specialized models for Turkish medical documentation standards
 
 ### Evaluation Metrics
 
@@ -102,19 +96,7 @@ HASTA: "İşte, sanki bıçak saplanıyor göğsümde 2 saattir."
 - **Clinical Decision Support Quality**: Actionable insights for healthcare providers
 - **Documentation Completeness Index**: Comprehensive capture of all relevant clinical data
 
-### Quality Assurance Framework
 
-#### Multi-stage Validation Process
-1. **Linguistic Validation**: Native Turkish medical professionals review terminology accuracy
-2. **Cultural Validation**: Regional cultural consultants verify cultural competency
-3. **Clinical Validation**: Practicing Turkish physicians assess clinical utility
-4. **Technical Validation**: AI engineers verify system performance metrics
-
-#### Continuous Improvement Methodology
-- **Real-world Performance Monitoring**: Ongoing evaluation in live clinical environments
-- **Error Pattern Analysis**: Systematic identification of recurring failure modes
-- **Model Refinement Cycles**: Regular updates based on performance data and user feedback
-- **Regional Adaptation**: Customization for specific Turkish geographic regions
 
 ## Implementation Priorities
 
@@ -139,11 +121,10 @@ Specialty-specific cases for subspecialty medical fields with unique communicati
 
 ### Turkish Healthcare Regulations
 - **Patient Privacy Laws**: KVKK (Personal Data Protection Law) compliance requirements
-- **Medical Documentation Standards**: Turkish Ministry of Health documentation requirements
 - **Medical Device Regulations**: Conformity with Turkish medical device classification standards
 
 ### International Standards Alignment
-- **ISO 27799**: Health informatics security management
+- **ISO 27799, 27001, 27701**: 
 - **HL7 FHIR**: Interoperability with international healthcare systems
 - **SNOMED CT**: Standardized medical terminology mapping
 - **ICD-11**: International disease classification compatibility
